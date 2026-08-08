@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Production build outputs
+dist/
+
+# Local configuration files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor/OS temporary files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Internal tool configurations
+.gemini/
