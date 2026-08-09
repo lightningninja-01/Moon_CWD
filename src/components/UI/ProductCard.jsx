@@ -27,7 +27,7 @@ export default function ProductCard({ product, onClick, showLink = true }) {
             alt={product.name}
             className={`w-full h-full object-contain transition-transform duration-500 max-h-[210px] ${
               product.id === '20l' 
-                ? 'scale-[1.10] group-hover:scale-[1.13]' 
+                ? 'scale-[1.03] group-hover:scale-[1.06]' 
                 : 'group-hover:scale-[1.03]'
             }`}
           />
