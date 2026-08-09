@@ -3,13 +3,14 @@ import { motion } from 'framer-motion';
 import Container from '../UI/Container';
 import Button from '../UI/Button';
 import moonHomeSvg from '../../assets/images/moon_home.svg';
+import moonBottleCutout from '../../assets/images/MoonBottleCutout.png';
 
 /**
  * Hero Component.
- * - Full-bleed viewport layout using clean moon_home.svg (moon.backup.svg) as background.
+ * - Full-bleed viewport layout using clean moon_home.svg (moon_home_clean_fade2.svg) as background.
  * - Aspect ratio preserved, no distortion, no mockup elements.
- * - Background SVG is scaled and aligned to bottom to frame the content.
  * - Centered React content overlays (eyebrow, paragraph, buttons) with visually hidden logo elements for accessibility/SEO.
+ * - Gentle floating transparent bottle (MoonBottleCutout.png) centered in the negative space below the CTA buttons.
  */
 export default function Hero() {
   return (
@@ -70,6 +71,30 @@ export default function Hero() {
             <Button to="/contact" variant="secondary" className="h-[46px] px-8 text-xs tracking-widest bg-white/80 hover:bg-white transition-all backdrop-blur-[2px]">
               Contact Us
             </Button>
+          </motion.div>
+
+          {/* Gently Floating Isolated Transparent Bottle Cutout */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ 
+              opacity: 1, 
+              y: [0, -6, 0] 
+            }}
+            transition={{
+              opacity: { duration: 0.8, delay: 0.45, ease: 'easeOut' },
+              y: {
+                duration: 5,
+                repeat: Infinity,
+                ease: 'easeInOut'
+              }
+            }}
+            className="mt-10 md:mt-12 flex justify-center items-center select-none pointer-events-none z-20"
+          >
+            <img
+              src={moonBottleCutout}
+              alt="Moon Premium Bottle"
+              className="w-[85px] md:w-[100px] lg:w-[115px] h-auto object-contain drop-shadow-[0_12px_28px_rgba(10,35,74,0.06)]"
+            />
           </motion.div>
           
         </div>

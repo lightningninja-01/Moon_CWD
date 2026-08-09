@@ -17,7 +17,6 @@ import moon1L from '../assets/images/Moon 1L.png';
  */
 export default function Products() {
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [hasSettled, setHasSettled] = useState(false);
 
   return (
     <>
@@ -45,31 +44,16 @@ export default function Products() {
               </p>
             </div>
 
-            {/* Right Column: Dynamic Bottle Dropping & Floating Showcase */}
+            {/* Right Column: Dynamic Bottle Showcase */}
             <div className="lg:col-span-5 flex items-center justify-center min-h-[360px] md:min-h-[420px] relative">
               <motion.div
-                initial={{ y: "-100vh", opacity: 0 }}
-                animate={
-                  hasSettled
-                    ? { y: [0, -7, 0], opacity: 1 }
-                    : { y: 0, opacity: 1 }
-                }
-                transition={
-                  hasSettled
-                    ? {
-                        duration: 4.5,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }
-                    : {
-                        type: "spring",
-                        damping: 14,
-                        stiffness: 45,
-                        duration: 1.8
-                      }
-                }
-                onAnimationComplete={() => {
-                  if (!hasSettled) setHasSettled(true);
+                initial={{ y: -30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  type: "spring",
+                  damping: 15,
+                  stiffness: 50,
+                  duration: 1.2
                 }}
                 className="relative cursor-pointer select-none"
                 whileHover={{ scale: 1.02 }}
@@ -82,11 +66,7 @@ export default function Products() {
                 />
 
                 {/* Soft floor shadow */}
-                <motion.div
-                  animate={hasSettled ? { scale: [1, 0.9, 1], opacity: [0.15, 0.22, 0.15] } : { scale: 1, opacity: 0.15 }}
-                  transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[90px] h-[8px] bg-primary/20 blur-[6px] rounded-full"
-                />
+                <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[90px] h-[8px] bg-primary/20 blur-[6px] rounded-full opacity-60" />
               </motion.div>
             </div>
           </Container>
