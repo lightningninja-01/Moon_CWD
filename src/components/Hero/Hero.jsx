@@ -17,14 +17,10 @@ export default function Hero() {
       
       {/* Background/Artwork Layer (Preserving original proportions, centered at bottom) */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none overflow-hidden flex items-end justify-center">
-        <div className="w-full max-w-[500px] md:max-w-[750px] lg:max-w-[850px] h-auto md:h-[92%] overflow-hidden flex items-end justify-center">
+        <div className="relative w-[88%] max-w-[440px] md:max-w-[660px] lg:max-w-[748px] h-auto md:h-[92%] overflow-hidden flex items-end justify-center">
           <img
             src={moonHomeSvg}
-            className="w-full h-full object-contain object-bottom"
-            style={{
-              transform: 'scaleX(1.15)',
-              transformOrigin: 'center center'
-            }}
+            className="absolute left-1/2 -translate-x-1/2 w-[113.64%] max-w-[500px] md:max-w-[750px] lg:max-w-[850px] h-full object-contain object-bottom"
             alt=""
             aria-hidden="true"
           />
