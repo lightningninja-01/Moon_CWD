@@ -45,31 +45,61 @@ export default function Products() {
             </div>
 
             {/* Right Column: Dynamic Bottle Showcase */}
-            <div className="lg:col-span-5 flex items-center justify-center min-h-[400px] md:min-h-[460px] relative">
+            <div className="lg:col-span-5 flex items-center justify-center min-h-[440px] md:min-h-[500px] relative">
               <style dangerouslySetInnerHTML={{__html: `
+                @keyframes moonBottleDrop {
+                  0% {
+                    opacity: 0;
+                    transform: translateY(-120px);
+                  }
+                  60% {
+                    opacity: 1;
+                    transform: translateY(8px);
+                  }
+                  80% {
+                    transform: translateY(-3px);
+                  }
+                  100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                  }
+                }
+
                 @keyframes moonBottleFloat {
                   0%, 100% {
                     transform: translateY(0);
                   }
                   50% {
-                    transform: translateY(-10px);
+                    transform: translateY(-7px);
                   }
+                }
+
+                .bottle-entrance {
+                  animation: moonBottleDrop 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+                  will-change: transform, opacity;
+                }
+
+                .bottle-float {
+                  animation: moonBottleFloat 4s ease-in-out 1.2s infinite;
+                  will-change: transform;
                 }
               `}} />
               <div className="relative select-none flex flex-col items-center justify-center">
-                <img 
-                  src={moonBottleCutout} 
-                  alt="Moon Premium Bottle" 
-                  className="w-[220px] md:w-[280px] lg:w-[320px] object-contain drop-shadow-[0_12px_28px_rgba(10,35,74,0.06)] transition-transform duration-300 hover:scale-[1.02]"
-                  style={{
-                    animation: 'moonBottleFloat 4s ease-in-out infinite',
-                    willChange: 'transform'
-                  }}
-                  aria-hidden="true"
-                />
+                {/* Outer wrapper: Drop entrance */}
+                <div className="bottle-entrance">
+                  {/* Inner wrapper: Subtle infinite floating */}
+                  <div className="bottle-float">
+                    <img 
+                      src={moonBottleCutout} 
+                      alt="Moon Premium Bottle" 
+                      className="w-[260px] md:w-[340px] lg:w-[390px] object-contain drop-shadow-[0_12px_32px_rgba(10,35,74,0.06)] transition-transform duration-300 hover:scale-[1.02]"
+                      aria-hidden="true"
+                    />
+                  </div>
+                </div>
 
                 {/* Soft floor shadow */}
-                <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[120px] h-[10px] bg-primary/10 blur-[8px] rounded-full pointer-events-none" />
+                <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-[140px] h-[12px] bg-primary/10 blur-[10px] rounded-full pointer-events-none" />
               </div>
             </div>
           </Container>
