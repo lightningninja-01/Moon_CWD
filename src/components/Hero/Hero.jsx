@@ -2,12 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Container from '../UI/Container';
 import Button from '../UI/Button';
-import moonHomeSvg from '../../assets/images/moon_home.svg';
+import moonSvg from '../../assets/images/moon.svg';
 import logoPng from '../../assets/images/logo.png';
 
 /**
  * Hero Component.
- * - Full-bleed responsive background layout featuring moon_home.svg.
+ * - Full-bleed responsive background layout featuring the clean moon.svg landscape.
  * - Content exactly centered vertically and horizontally.
  * - Text content aligned perfectly to sit in the sky opening of the mountains.
  */
@@ -15,11 +15,12 @@ export default function Hero() {
   return (
     <section className="relative w-full h-screen min-h-[600px] flex items-center justify-center bg-white overflow-hidden select-none">
       
-      {/* Full-bleed Background SVG */}
+      {/* Full-bleed Background SVG (Clean mountain landscape artwork only) */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none overflow-hidden">
         <img
-          src={moonHomeSvg}
-          className="w-full h-full object-cover object-center"
+          src={moonSvg}
+          className="w-full h-full object-cover"
+          style={{ objectPosition: 'center 45%' }}
           alt=""
           aria-hidden="true"
         />
