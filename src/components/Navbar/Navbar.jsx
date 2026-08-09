@@ -48,15 +48,16 @@ export default function Navbar() {
       >
         <Container className="flex items-center justify-between">
           {/* Logo */}
+          {/* Logo */}
           <Link
             to="/"
             className="flex flex-col items-center select-none transition-opacity hover:opacity-90 group text-center"
             aria-label="Moon Home"
           >
-            <span className="font-manrope text-2xl font-light text-primary lowercase leading-none tracking-[0.05em]">
+            <span className="font-manrope text-[28px] font-light text-primary lowercase leading-none tracking-[0.05em]">
               moon
             </span>
-            <span className="font-inter text-[9px] font-medium tracking-[0.08em] text-secondary lowercase mt-1.5 leading-none">
+            <span className="font-inter text-[10px] font-medium tracking-[0.08em] text-[#45668E] lowercase mt-1.5 leading-none">
               illuminating pure hydration
             </span>
           </Link>
@@ -126,10 +127,10 @@ export default function Navbar() {
               <div className="space-y-12">
                 <div className="flex items-center justify-between">
                   <div className="flex flex-col items-center text-center">
-                    <span className="font-manrope text-xl font-light text-primary lowercase leading-none tracking-[0.05em]">
+                    <span className="font-manrope text-[23px] font-light text-primary lowercase leading-none tracking-[0.05em]">
                       moon
                     </span>
-                    <span className="font-inter text-[8px] font-medium tracking-[0.08em] text-secondary lowercase mt-1 leading-none">
+                    <span className="font-inter text-[9px] font-medium tracking-[0.08em] text-[#45668E] lowercase mt-1.5 leading-none">
                       illuminating pure hydration
                     </span>
                   </div>
