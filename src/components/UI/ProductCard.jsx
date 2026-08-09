@@ -25,8 +25,10 @@ export default function ProductCard({ product, onClick, showLink = true }) {
           <img
             src={product.image}
             alt={product.name}
-            className={`w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03] ${
-              product.id === '20l' ? 'max-h-[170px] max-w-[85%]' : 'max-h-[210px]'
+            className={`w-full h-full object-contain transition-transform duration-500 max-h-[210px] ${
+              product.id === '20l' 
+                ? 'scale-[1.10] group-hover:scale-[1.13]' 
+                : 'group-hover:scale-[1.03]'
             }`}
           />
         </div>
