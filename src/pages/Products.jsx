@@ -8,7 +8,7 @@ import ProductCard from '../components/UI/ProductCard';
 import Button from '../components/UI/Button';
 import SEO from '../components/UI/SEO';
 import { PRODUCTS } from '../constants';
-import moon1L from '../assets/images/Moon 1L.png';
+import moonBottleCutout from '../assets/images/MoonBottleCutout.png';
 
 /**
  * Products Page.
@@ -47,22 +47,24 @@ export default function Products() {
             {/* Right Column: Dynamic Bottle Showcase */}
             <div className="lg:col-span-5 flex items-center justify-center min-h-[360px] md:min-h-[420px] relative">
               <motion.div
-                initial={{ y: -30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
+                animate={{ 
+                  y: [0, -8, 0]
+                }}
                 transition={{
-                  type: "spring",
-                  damping: 15,
-                  stiffness: 50,
-                  duration: 1.2
+                  y: {
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: 'easeInOut'
+                  }
                 }}
                 className="relative cursor-pointer select-none"
                 whileHover={{ scale: 1.02 }}
                 aria-hidden="true"
               >
                 <img 
-                  src={moon1L} 
-                  alt="Moon Premium 1L Bottle" 
-                  className="w-[140px] md:w-[170px] lg:w-[190px] object-contain drop-shadow-[0_12px_28px_rgba(10,35,74,0.06)]"
+                  src={moonBottleCutout} 
+                  alt="Moon Premium Bottle" 
+                  className="w-[130px] md:w-[160px] lg:w-[180px] object-contain drop-shadow-[0_12px_28px_rgba(10,35,74,0.06)]"
                 />
 
                 {/* Soft floor shadow */}
