@@ -20,9 +20,6 @@ export default function Hero() {
         <img
           src={moonHomeSvg}
           className="w-full max-w-[500px] md:max-w-[750px] lg:max-w-[850px] h-auto md:h-[92%] object-contain object-bottom"
-          style={{
-            clipPath: 'inset(0 30px 0 30px)'
-          }}
           alt=""
           aria-hidden="true"
         />
