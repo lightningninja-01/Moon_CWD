@@ -1,5 +1,4 @@
 import React from 'react';
-import ProductPlaceholder from './ProductPlaceholder';
 
 /**
  * Reusable Product Card Component.
@@ -21,8 +20,16 @@ export default function ProductCard({ product, onClick, showLink = true }) {
       aria-label={`View details for ${product.name}`}
     >
       <div className="space-y-6">
-        {/* Vector SVG Blueprint Outline Placeholder */}
-        <ProductPlaceholder size={product.volume} />
+        {/* Real Product Image Container */}
+        <div className="relative w-full aspect-[4/5] bg-[#F8FBFD] border border-border/40 rounded-xl flex items-center justify-center p-6 select-none group-hover:border-secondary/20 transition-all duration-300 overflow-hidden">
+          <img
+            src={product.image}
+            alt={product.name}
+            className={`w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.03] ${
+              product.id === '20l' ? 'max-h-[170px] max-w-[85%]' : 'max-h-[210px]'
+            }`}
+          />
+        </div>
         
         {/* Typography */}
         <div className="space-y-2">

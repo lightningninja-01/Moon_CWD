@@ -10,6 +10,11 @@ export const NAV_LINKS = [
   { label: 'Contact', path: '/contact' }
 ];
 
+import moon500 from '../assets/images/Moon 500ml.png';
+import moon1L from '../assets/images/Moon 1L.png';
+import moon2L from '../assets/images/Moon 2L.png';
+import moon20L from '../assets/images/Moon 20L.png';
+
 export const PRODUCTS = [
   {
     id: '500ml',
@@ -17,6 +22,7 @@ export const PRODUCTS = [
     volume: '500ml',
     tagline: 'Refined Personal Hydration',
     description: 'A compact and elegant companion designed for active commutes, fitness studios, and daily travel.',
+    image: moon500,
     specs: {
       pH: '7.4 ± 0.2 (Neutral)',
       source: 'Protected Alpine Aquifer',
@@ -30,6 +36,7 @@ export const PRODUCTS = [
     volume: '1L',
     tagline: 'The Workspace Essential',
     description: 'An editorial design statement for conference tables, dining settings, or your home work desk.',
+    image: moon1L,
     specs: {
       pH: '7.4 ± 0.2 (Neutral)',
       source: 'Protected Alpine Aquifer',
@@ -43,6 +50,7 @@ export const PRODUCTS = [
     volume: '2L',
     tagline: 'Extended Shared Hydration',
     description: 'Generously proportioned for residential dinner tables, culinary preparation, and active households.',
+    image: moon2L,
     specs: {
       pH: '7.4 ± 0.2 (Neutral)',
       source: 'Protected Alpine Aquifer',
@@ -56,6 +64,7 @@ export const PRODUCTS = [
     volume: '20L Jar',
     tagline: 'The Purity Reservoir',
     description: 'Engineered for high-capacity dispensers, offering a continuous stream of pure hydration for homes or workspaces.',
+    image: moon20L,
     specs: {
       pH: '7.4 ± 0.2 (Neutral)',
       source: 'Protected Alpine Aquifer',

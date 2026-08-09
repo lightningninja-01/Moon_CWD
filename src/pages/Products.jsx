@@ -8,6 +8,7 @@ import ProductCard from '../components/UI/ProductCard';
 import Button from '../components/UI/Button';
 import SEO from '../components/UI/SEO';
 import { PRODUCTS } from '../constants';
+import moon1L from '../assets/images/Moon 1L.png';
 
 /**
  * Products Page.
@@ -74,74 +75,11 @@ export default function Products() {
                 whileHover={{ scale: 1.02 }}
                 aria-hidden="true"
               >
-                {/* 
-                  IMAGE REFERENCE PLACEHOLDER FOR CLIENT 
-                  Uncomment this <img> tag and link your actual bottle photo here.
-                  Make sure to add the correct image path (e.g. /src/assets/images/actual_bottle.png).
-                */}
-                {/* 
                 <img 
-                  src="/src/assets/images/actual_bottle.png" 
-                  alt="Moon Premium Bottle" 
-                  className="w-[180px] md:w-[220px] lg:w-[240px] drop-shadow-[0_12px_28px_rgba(10,35,74,0.06)]"
-                /> 
-                */}
-
-                {/* Visible Vector Bottle Placeholder (Will be replaced when they uncomment the image tag above) */}
-                <svg
-                  viewBox="0 0 160 480"
-                  className="w-[160px] md:w-[200px] lg:w-[220px] drop-shadow-[0_12px_28px_rgba(10,35,74,0.06)]"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  {/* Cap */}
-                  <rect x="68" y="20" width="24" height="20" rx="4" fill="#E8F0F8" stroke="#5B7DA5" strokeWidth="1.5" />
-                  <line x1="72" y1="26" x2="88" y2="26" stroke="#5B7DA5" strokeWidth="1" />
-                  <line x1="72" y1="30" x2="88" y2="30" stroke="#5B7DA5" strokeWidth="1" />
-                  
-                  {/* Neck & Body */}
-                  <path
-                    d="M68,40 L68,70 C68,90 50,110 50,130 L50,440 C50,455 62,465 80,465 C98,465 110,455 110,440 L110,130 C110,110 92,90 92,70 L92,40 Z"
-                    fill="#FFFFFF"
-                    fillOpacity="0.75"
-                    stroke="#5B7DA5"
-                    strokeWidth="1.5"
-                  />
-                  
-                  {/* Water Volume */}
-                  <path
-                    d="M52,142 L52,438 C52,448 60,458 80,458 C100,458 108,448 108,438 L108,142 C108,142 94,146 80,142 C66,138 52,142 52,142 Z"
-                    fill="url(#water-gradient-spec)"
-                    opacity="0.85"
-                  />
-                  
-                  {/* Minimalist Logo print on Glass */}
-                  <circle cx="80" cy="240" r="16" stroke="#0A234A" strokeWidth="1" strokeDasharray="3 3" opacity="0.6" />
-                  <text
-                    x="80"
-                    y="244"
-                    fill="#0A234A"
-                    fontFamily="Manrope"
-                    fontSize="11"
-                    fontWeight="300"
-                    letterSpacing="0.05em"
-                    textAnchor="middle"
-                    opacity="0.8"
-                  >
-                    moon
-                  </text>
-                  
-                  {/* Specular Highlights */}
-                  <path d="M58,150 L58,420" stroke="#FFFFFF" strokeWidth="3.5" strokeLinecap="round" opacity="0.45" />
-                  <path d="M102,170 L102,380" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" opacity="0.3" />
-                  
-                  <defs>
-                    <linearGradient id="water-gradient-spec" x1="80" y1="142" x2="80" y2="458" gradientUnits="userSpaceOnUse">
-                      <stop offset="0%" stopColor="#A8BED7" stopOpacity="0.45" />
-                      <stop offset="100%" stopColor="#5B7DA5" stopOpacity="0.15" />
-                    </linearGradient>
-                  </defs>
-                </svg>
+                  src={moon1L} 
+                  alt="Moon Premium 1L Bottle" 
+                  className="w-[140px] md:w-[170px] lg:w-[190px] object-contain drop-shadow-[0_12px_28px_rgba(10,35,74,0.06)]"
+                />
 
                 {/* Soft floor shadow */}
                 <motion.div
