@@ -20,6 +20,10 @@ export default function Hero() {
         <img
           src={moonHomeSvg}
           className="w-full max-w-[500px] md:max-w-[750px] lg:max-w-[850px] h-auto md:h-[92%] object-contain object-bottom"
+          style={{
+            maskImage: 'linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)'
+          }}
           alt=""
           aria-hidden="true"
         />
