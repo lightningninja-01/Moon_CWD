@@ -9,6 +9,7 @@ import moonHomeSvg from '../../assets/images/moon_home.svg';
  * - Full-bleed viewport layout using clean moon_home.svg (moon_home_clean_fade2.svg) as background.
  * - Aspect ratio preserved, no distortion, no mockup elements.
  * - Centered React content overlays (eyebrow, paragraph, buttons) with visually hidden logo elements for accessibility/SEO.
+ * - Spacing adjusted: Eyebrow stays fixed in place, while paragraph copy and buttons are grouped and translated downward by 45px to frame them beautifully within the valley opening of the landscape.
  */
 export default function Hero() {
   return (
@@ -36,7 +37,7 @@ export default function Hero() {
             <h2>illuminating pure hydration</h2>
           </div>
           
-          {/* Eyebrow */}
+          {/* Eyebrow (Remains exactly in its original position) */}
           <motion.span
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,30 +47,33 @@ export default function Hero() {
             Pure Glacial Water
           </motion.span>
 
-          {/* Description Paragraph */}
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-            className="font-inter text-[#46566B] text-para leading-relaxed max-w-[500px] mb-8 md:mb-10 text-sm md:text-base font-normal"
-          >
-            Crafted for everyday refreshment, filtered by alpine geology, and preserved in premium, sustainable glass. Every sip reflects our commitment to purity.
-          </motion.p>
+          {/* Lower Content Group: Paragraph & CTA Buttons (Shifted downward by 45px as one cohesive unit) */}
+          <div className="translate-y-[45px] flex flex-col items-center w-full">
+            {/* Description Paragraph */}
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+              className="font-inter text-[#46566B] text-para leading-relaxed max-w-[500px] mb-8 md:mb-10 text-sm md:text-base font-normal"
+            >
+              Crafted for everyday refreshment, filtered by alpine geology, and preserved in premium, sustainable glass. Every sip reflects our commitment to purity.
+            </motion.p>
 
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.35, ease: 'easeOut' }}
-            className="flex flex-row gap-4 justify-center items-center w-full sm:w-auto"
-          >
-            <Button to="/products" variant="primary" className="h-[46px] px-8 text-xs tracking-widest">
-              Explore Products
-            </Button>
-            <Button to="/contact" variant="secondary" className="h-[46px] px-8 text-xs tracking-widest bg-white/80 hover:bg-white transition-all backdrop-blur-[2px]">
-              Contact Us
-            </Button>
-          </motion.div>
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.35, ease: 'easeOut' }}
+              className="flex flex-row gap-4 justify-center items-center w-full sm:w-auto"
+            >
+              <Button to="/products" variant="primary" className="h-[46px] px-8 text-xs tracking-widest">
+                Explore Products
+              </Button>
+              <Button to="/contact" variant="secondary" className="h-[46px] px-8 text-xs tracking-widest bg-white/80 hover:bg-white transition-all backdrop-blur-[2px]">
+                Contact Us
+              </Button>
+            </motion.div>
+          </div>
           
         </div>
       </Container>
