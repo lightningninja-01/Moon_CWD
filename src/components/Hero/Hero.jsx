@@ -17,12 +17,18 @@ export default function Hero() {
       
       {/* Background/Artwork Layer (Preserving original proportions, centered at bottom) */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none overflow-hidden flex items-end justify-center">
-        <img
-          src={moonHomeSvg}
-          className="w-full max-w-[500px] md:max-w-[750px] lg:max-w-[850px] h-auto md:h-[92%] object-contain object-bottom"
-          alt=""
-          aria-hidden="true"
-        />
+        <div className="w-full max-w-[500px] md:max-w-[750px] lg:max-w-[850px] h-auto md:h-[92%] overflow-hidden flex items-end justify-center">
+          <img
+            src={moonHomeSvg}
+            className="w-full h-full object-contain object-bottom"
+            style={{
+              transform: 'scaleX(1.15)',
+              transformOrigin: 'center center'
+            }}
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
         {/* Soft Grid Blueprint overlay on top of the background image */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#e8f0f8_1px,transparent_1px),linear-gradient(to_bottom,#e8f0f8_1px,transparent_1px)] bg-[size:60px_60px] opacity-[0.15]" />
       </div>
