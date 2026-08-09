@@ -8,6 +8,7 @@ import moonHomeSvg from '../../assets/images/moon_home.svg';
  * Hero Component.
  * - Full-bleed viewport layout using clean moon_home.svg (moon.backup.svg) as background.
  * - Aspect ratio preserved, no distortion, no mockup elements.
+ * - Background SVG is scaled and aligned to bottom to frame the content.
  * - Centered React content overlays (eyebrow, paragraph, buttons) with visually hidden logo elements for accessibility/SEO.
  */
 export default function Hero() {
@@ -18,7 +19,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 select-none pointer-events-none overflow-hidden flex items-end justify-center">
         <img
           src={moonHomeSvg}
-          className="w-full h-full object-contain object-bottom max-w-[1200px]"
+          className="w-full max-w-[500px] md:max-w-[750px] lg:max-w-[850px] h-auto md:h-[92%] object-contain object-bottom"
           alt=""
           aria-hidden="true"
         />
@@ -27,8 +28,8 @@ export default function Hero() {
       </div>
 
       {/* Centered Content Container */}
-      <Container className="relative z-10 flex items-center justify-center w-full h-full pointer-events-none">
-        <div className="text-center max-w-[600px] px-6 flex flex-col items-center pointer-events-auto mt-24 md:mt-28">
+      <Container className="relative z-10 flex items-start justify-center md:items-center w-full h-full pointer-events-none">
+        <div className="text-center max-w-[600px] px-6 flex flex-col items-center pointer-events-auto mt-28 md:mt-24">
           
           {/* Accessibility & SEO Headings (Visually hidden, screen-reader only to avoid duplicate branding) */}
           <div className="sr-only">
