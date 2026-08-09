@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Container from '../UI/Container';
 import { NAV_LINKS, BUSINESS_INFO } from '../../constants';
 import { Instagram, Facebook, Linkedin } from 'lucide-react';
+import moonHomeSvg from '../../assets/images/moon_home.svg';
 
 /**
  * Clean, spacious, and responsive Footer component.
@@ -21,14 +22,15 @@ export default function Footer() {
     <footer className="bg-white border-t border-border pt-24 pb-12 w-full mt-auto">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-20">
-          {/* Logo & Tagline */}
-          <div className="md:col-span-2 flex flex-col items-start select-none">
-            <span className="font-manrope text-2xl font-light text-primary lowercase leading-none tracking-[0.05em]">
-              moon
-            </span>
-            <span className="font-inter text-[9px] font-medium tracking-[0.08em] text-muted lowercase mt-1.5 leading-none">
-              illuminating pure hydration
-            </span>
+          {/* Brand Artwork Signature */}
+          <div className="md:col-span-2 flex flex-col items-center md:items-start select-none">
+            <Link to="/" className="block max-w-[240px] w-full" aria-label="Moon Home">
+              <img
+                src={moonHomeSvg}
+                alt="Moon branding"
+                className="w-full h-auto object-contain"
+              />
+            </Link>
           </div>
 
           {/* Navigation */}
