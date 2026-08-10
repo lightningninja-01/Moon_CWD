@@ -28,9 +28,9 @@ export default function WhyMoon() {
   ];
 
   return (
-    <section className="bg-background py-32 border-b border-border" id="why-moon">
+    <section className="bg-background py-20 md:py-24 lg:py-32 border-b border-border" id="why-moon">
       <Container>
-        <div className="space-y-16">
+        <div className="space-y-10 md:space-y-16">
           {/* Header */}
           <div className="text-center max-w-[620px] mx-auto space-y-4">
             <span className="font-inter text-xs font-bold tracking-[0.25em] uppercase text-secondary">
@@ -45,7 +45,7 @@ export default function WhyMoon() {
           </div>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
             {cards.map((card, idx) => {
               const Icon = card.icon;
               return (
@@ -55,7 +55,7 @@ export default function WhyMoon() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.8, delay: idx * 0.15 }}
-                  className="bg-white border border-border rounded-[16px] p-8 shadow-soft hover:shadow-soft-lg hover:-translate-y-[6px] transition-all duration-500 ease-out flex flex-col items-start space-y-6"
+                  className="bg-white border border-border rounded-[16px] p-6 sm:p-8 shadow-soft hover:shadow-soft-lg hover:-translate-y-[6px] transition-all duration-500 ease-out flex flex-col items-start space-y-6"
                 >
                   {/* Outline Icon */}
                   <div className="p-3 bg-background rounded-xl border border-border/50 text-secondary">

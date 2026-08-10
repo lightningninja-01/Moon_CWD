@@ -8,9 +8,9 @@ import Container from '../UI/Container';
  */
 export default function AboutSection() {
   return (
-    <section className="bg-white py-32 border-b border-border" id="about">
+    <section className="bg-white py-20 md:py-24 lg:py-32 border-b border-border" id="about">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-start">
           {/* Section Label */}
           <div className="lg:col-span-4">
             <motion.span
@@ -41,7 +41,7 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-6 text-[#46566B] font-inter text-para max-w-[640px] leading-relaxed"
+              className="space-y-5 md:space-y-6 text-[#46566B] font-inter text-base md:text-para max-w-[640px] leading-relaxed"
             >
               <p>
                 We believe water should be experienced as nature intended: untouched, serene, and perfectly balanced. 

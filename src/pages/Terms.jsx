@@ -17,8 +17,8 @@ export default function Terms() {
       />
       <Navbar />
 
-      <main className="min-h-screen pt-36 pb-24 bg-white text-left">
-        <Container className="max-w-[720px] mx-auto space-y-12">
+      <main className="min-h-screen pt-28 sm:pt-36 pb-16 md:pb-24 bg-white text-left">
+        <Container className="max-w-[720px] mx-auto space-y-8 md:space-y-12">
           {/* Header */}
           <div className="space-y-4 border-b border-border pb-8">
             <span className="font-inter text-xs font-bold tracking-[0.25em] uppercase text-secondary">

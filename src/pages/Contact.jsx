@@ -77,9 +77,9 @@ export default function Contact() {
       />
       <Navbar />
 
-      <main className="pt-32 pb-24 bg-white">
+      <main className="pt-28 sm:pt-32 pb-16 md:pb-24 bg-white">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mt-12 md:mt-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start mt-8 sm:mt-12 md:mt-20">
             {/* Left Column: Let's Connect */}
             <div className="lg:col-span-5 space-y-12 select-none">
               <div className="space-y-4">
@@ -163,7 +163,7 @@ export default function Contact() {
                     className="relative z-10 space-y-6"
                     noValidate
                   >
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
                       {/* Name field */}
                       <div className="space-y-2">
                         <label htmlFor="name" className="block text-xs font-bold tracking-widest text-primary uppercase">
@@ -201,7 +201,7 @@ export default function Contact() {
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
                       {/* Phone field */}
                       <div className="space-y-2">
                         <label htmlFor="phone" className="block text-xs font-bold tracking-widest text-primary uppercase">

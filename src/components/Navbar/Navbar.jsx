@@ -37,13 +37,18 @@ export default function Navbar() {
     setMobileMenuOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileMenuOpen]);
+
   return (
     <>
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${
           scrolled
-            ? 'bg-white border-b border-border py-4 shadow-soft'
-            : 'bg-transparent py-6'
+            ? 'bg-white/95 backdrop-blur-sm border-b border-border py-3 sm:py-4 shadow-soft'
+            : 'bg-transparent py-4 sm:py-6'
         }`}
       >
         <Container className="flex items-center justify-between">
@@ -63,7 +68,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-10" aria-label="Desktop navigation">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-10" aria-label="Desktop navigation">
             {NAV_LINKS.map((link) => (
               <NavLink
                 key={link.path}
@@ -80,7 +85,7 @@ export default function Navbar() {
           </nav>
 
           {/* Sign In Button - Desktop */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Button
               to="/signin"
               variant="secondary"
@@ -93,7 +98,7 @@ export default function Navbar() {
           {/* Mobile Menu Toggle */}
           <button
             type="button"
-            className="block md:hidden text-primary p-2 focus:outline-none"
+            className="block lg:hidden text-primary p-2 -mr-2 focus:outline-none"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label="Toggle navigation menu"
@@ -113,7 +118,7 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 bg-[#0A234A]/20 z-40 md:hidden"
+              className="fixed inset-0 bg-[#0A234A]/20 z-40 lg:hidden"
             />
 
             {/* Side Drawer */}
@@ -122,7 +127,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 w-[280px] h-full bg-white z-50 p-8 flex flex-col justify-between border-l border-border md:hidden"
+              className="fixed inset-y-0 right-0 w-[min(320px,88vw)] bg-white z-50 p-6 sm:p-8 flex flex-col justify-between border-l border-border lg:hidden overflow-y-auto"
             >
               <div className="space-y-12">
                 <div className="flex items-center justify-between">

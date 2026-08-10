@@ -26,10 +26,10 @@ export default function Products() {
       />
       <Navbar />
 
-      <main className="pt-32 pb-24 bg-white">
+      <main className="pt-28 sm:pt-32 pb-16 md:pb-24 bg-white">
         {/* Page Hero */}
         <section className="py-16 md:py-24 select-none">
-          <Container className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <Container className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
             {/* Left Column: Text Content */}
             <div className="lg:col-span-7 space-y-6">
               <span className="font-inter text-xs font-bold tracking-[0.25em] uppercase text-secondary block">
@@ -92,7 +92,7 @@ export default function Products() {
                     <img 
                       src={moonBottleCutout} 
                       alt="Moon Premium Bottle" 
-                      className="w-[260px] md:w-[340px] lg:w-[390px] object-contain drop-shadow-[0_12px_32px_rgba(10,35,74,0.06)] transition-transform duration-300 hover:scale-[1.02]"
+                      className="w-[min(260px,75vw)] md:w-[340px] lg:w-[390px] object-contain drop-shadow-[0_12px_32px_rgba(10,35,74,0.06)] transition-transform duration-300 hover:scale-[1.02]"
                       aria-hidden="true"
                     />
                   </div>
@@ -139,7 +139,7 @@ export default function Products() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 30, scale: 0.98 }}
                 transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                className="fixed inset-y-4 right-4 left-4 md:left-auto md:w-[600px] bg-white border border-border rounded-[16px] shadow-soft-lg z-50 overflow-hidden flex flex-col justify-between"
+                className="fixed inset-y-2 right-2 left-2 sm:inset-y-4 sm:right-4 sm:left-4 md:left-auto md:w-[600px] bg-white border border-border rounded-[16px] shadow-soft-lg z-50 overflow-hidden flex flex-col justify-between"
               >
                 {/* Header */}
                 <div className="p-6 border-b border-border flex items-center justify-between">

@@ -13,13 +13,13 @@ import moonHomeSvg from '../../assets/images/moon_home.svg';
  */
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen min-h-[600px] flex items-center justify-center bg-white overflow-hidden select-none">
+    <section className="relative w-full min-h-[600px] h-[100svh] flex items-center justify-center bg-white overflow-hidden select-none">
       
       {/* Background/Artwork Layer (Preserving original proportions, centered at bottom) */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none overflow-hidden flex items-end justify-center">
         <img
           src={moonHomeSvg}
-          className="w-full max-w-[500px] md:max-w-[750px] lg:max-w-[850px] h-auto md:h-[92%] object-contain object-bottom"
+          className="w-full max-w-[520px] md:max-w-[750px] lg:max-w-[850px] h-auto md:h-[92%] object-contain object-bottom"
           alt=""
           aria-hidden="true"
         />
@@ -29,7 +29,7 @@ export default function Hero() {
 
       {/* Centered Content Container */}
       <Container className="relative z-10 flex items-start justify-center md:items-center w-full h-full pointer-events-none">
-        <div className="text-center max-w-[600px] px-6 flex flex-col items-center pointer-events-auto mt-28 md:mt-24">
+        <div className="text-center max-w-[600px] px-0 sm:px-6 flex flex-col items-center pointer-events-auto mt-20 sm:mt-24 md:mt-20">
           
           {/* Accessibility & SEO Headings (Visually hidden, screen-reader only to avoid duplicate branding) */}
           <div className="sr-only">
@@ -48,13 +48,13 @@ export default function Hero() {
           </motion.span>
 
           {/* Lower Content Group: Paragraph & CTA Buttons (Shifted downward by 45px as one cohesive unit) */}
-          <div className="translate-y-[45px] flex flex-col items-center w-full">
+          <div className="translate-y-6 sm:translate-y-[45px] flex flex-col items-center w-full">
             {/* Description Paragraph */}
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-              className="font-inter text-[#46566B] text-para leading-relaxed max-w-[500px] mb-8 md:mb-10 text-sm md:text-base font-normal"
+              className="font-inter text-[#46566B] leading-relaxed max-w-[500px] mb-7 md:mb-10 text-sm md:text-base font-normal"
             >
               Crafted for everyday refreshment, filtered by alpine geology, and preserved in premium, sustainable glass. Every sip reflects our commitment to purity.
             </motion.p>
@@ -64,12 +64,12 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.35, ease: 'easeOut' }}
-              className="flex flex-row gap-4 justify-center items-center w-full sm:w-auto"
+              className="flex flex-col min-[420px]:flex-row gap-3 sm:gap-4 justify-center items-stretch min-[420px]:items-center w-full sm:w-auto"
             >
-              <Button to="/products" variant="primary" className="h-[46px] px-8 text-xs tracking-widest">
+              <Button to="/products" variant="primary" className="h-[46px] w-full min-[420px]:w-auto px-6 sm:px-8 text-xs tracking-widest">
                 Explore Products
               </Button>
-              <Button to="/contact" variant="secondary" className="h-[46px] px-8 text-xs tracking-widest bg-white/80 hover:bg-white transition-all backdrop-blur-[2px]">
+              <Button to="/contact" variant="secondary" className="h-[46px] w-full min-[420px]:w-auto px-6 sm:px-8 text-xs tracking-widest bg-white/80 hover:bg-white transition-all backdrop-blur-[2px]">
                 Contact Us
               </Button>
             </motion.div>

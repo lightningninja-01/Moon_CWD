@@ -6,7 +6,7 @@ import React from 'react';
  */
 export default function Container({ children, className = '' }) {
   return (
-    <div className={`max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-16 w-full ${className}`}>
+    <div className={`max-w-[1440px] mx-auto px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 w-full ${className}`}>
       {children}
     </div>
   );

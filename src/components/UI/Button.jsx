@@ -15,7 +15,7 @@ export default function Button({
   type = 'button',
   ...props
 }) {
-  const baseStyle = "inline-flex items-center justify-center h-[52px] px-8 rounded-full font-inter text-sm font-medium tracking-wider uppercase transition-all duration-300 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 select-none active:scale-[0.98]";
+  const baseStyle = "inline-flex min-h-[48px] items-center justify-center rounded-full px-6 sm:px-8 font-inter text-xs sm:text-sm font-medium tracking-wider uppercase text-center transition-all duration-300 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 select-none active:scale-[0.98]";
   
   const variants = {
     primary: "bg-primary text-white hover:bg-[#143464] hover:shadow-sm active:bg-[#061834]",

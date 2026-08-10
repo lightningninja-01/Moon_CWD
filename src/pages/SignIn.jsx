@@ -60,12 +60,12 @@ export default function SignIn() {
       />
       <Navbar />
 
-      <main className="min-h-screen pt-32 pb-16 flex items-center justify-center bg-background relative select-none">
+      <main className="min-h-[100svh] pt-28 sm:pt-32 pb-12 sm:pb-16 flex items-center justify-center bg-background relative select-none">
         {/* Soft Grid blueprint lines in background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#e8f0f8_1px,transparent_1px),linear-gradient(to_bottom,#e8f0f8_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.25] pointer-events-none" />
 
         <Container className="flex justify-center items-center relative z-10">
-          <div className="w-full max-w-[460px] bg-white border border-border rounded-[16px] shadow-soft p-8 md:p-10 space-y-8 select-text">
+          <div className="w-full max-w-[460px] bg-white border border-border rounded-[16px] shadow-soft p-5 sm:p-8 md:p-10 space-y-7 sm:space-y-8 select-text">
             {/* Header branding */}
             <div className="text-center space-y-2">
               <span className="font-manrope text-2xl font-light text-primary lowercase select-none tracking-[0.05em]">
@@ -120,7 +120,7 @@ export default function SignIn() {
               </div>
 
               {/* Remember me & Forgot Password */}
-              <div className="flex items-center justify-between text-xs font-medium font-inter">
+              <div className="flex flex-col min-[380px]:flex-row min-[380px]:items-center min-[380px]:justify-between gap-3 text-xs font-medium font-inter">
                 <label className="flex items-center space-x-2 text-body cursor-pointer">
                   <input
                     type="checkbox"

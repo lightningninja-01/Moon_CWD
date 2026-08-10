@@ -10,9 +10,9 @@ import { PURIFICATION_STEPS } from '../../constants';
  */
 export default function WaterProcess() {
   return (
-    <section className="bg-background py-32 border-b border-border" id="purification-timeline">
+    <section className="bg-background py-20 md:py-24 lg:py-32 border-b border-border" id="purification-timeline">
       <Container>
-        <div className="space-y-20">
+        <div className="space-y-12 md:space-y-20">
           {/* Header */}
           <div className="text-center max-w-[620px] mx-auto space-y-4">
             <span className="font-inter text-xs font-bold tracking-[0.25em] uppercase text-secondary">
@@ -32,7 +32,7 @@ export default function WaterProcess() {
             <div className="hidden lg:block absolute top-[52px] left-[10%] right-[10%] h-[1px] bg-border z-0" />
 
             {/* Steps Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-8 relative z-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 lg:gap-8 relative z-10">
               {PURIFICATION_STEPS.map((step, idx) => (
                 <motion.div
                   key={step.id}

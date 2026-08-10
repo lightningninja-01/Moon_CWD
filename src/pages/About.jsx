@@ -19,11 +19,11 @@ export default function About() {
       />
       <Navbar />
       
-      <main className="pt-32 pb-24 bg-white">
+      <main className="pt-28 sm:pt-32 pb-16 md:pb-24 bg-white">
         {/* Editorial Hero Header */}
         <section className="py-20 md:py-28 select-none">
           <Container>
-            <div className="max-w-[800px] space-y-6">
+            <div className="max-w-[800px] space-y-5 md:space-y-6">
               <motion.span
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                className="font-manrope text-4xl md:text-6xl font-light text-heading leading-tight"
+                className="font-manrope text-4xl sm:text-5xl md:text-6xl font-light text-heading leading-tight"
               >
                 Inspired by Nature.
               </motion.h1>
@@ -44,7 +44,7 @@ export default function About() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="font-inter text-para text-[#46566B] max-w-[620px] leading-relaxed"
+                className="font-inter text-base md:text-para text-[#46566B] max-w-[620px] leading-relaxed"
               >
                 We observe natural filtration cycles and package them with architectural restraint. No gimmicks, no neon branding, just pristine hydration.
               </motion.p>
@@ -55,7 +55,7 @@ export default function About() {
         {/* Content Grid Sections */}
         <section className="py-16 border-t border-border">
           <Container>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-start">
               <div className="md:col-span-4 space-y-4">
                 <span className="font-manrope text-xs font-bold tracking-[0.2em] uppercase text-primary">01 / Source</span>
                 <h2 className="font-manrope text-2xl font-bold text-heading">The Alpine Aquifer</h2>
@@ -77,7 +77,7 @@ export default function About() {
 
         <section className="py-16 border-t border-border">
           <Container>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-start">
               <div className="md:col-span-4 space-y-4">
                 <span className="font-manrope text-xs font-bold tracking-[0.2em] uppercase text-primary">02 / Minerals</span>
                 <h2 className="font-manrope text-2xl font-bold text-heading">Balanced Chemistry</h2>
@@ -98,7 +98,7 @@ export default function About() {
 
         <section className="py-16 border-t border-border border-b">
           <Container>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-start">
               <div className="md:col-span-4 space-y-4">
                 <span className="font-manrope text-xs font-bold tracking-[0.2em] uppercase text-primary">03 / Packaging</span>
                 <h2 className="font-manrope text-2xl font-bold text-heading">Premium Glass Vessels</h2>

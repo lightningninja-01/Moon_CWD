@@ -13,9 +13,9 @@ export default function ProductShowcase() {
   const navigate = useNavigate();
 
   return (
-    <section className="bg-white py-32 border-b border-border" id="products-showcase">
+    <section className="bg-white py-20 md:py-24 lg:py-32 border-b border-border" id="products-showcase">
       <Container>
-        <div className="space-y-16">
+        <div className="space-y-10 md:space-y-16">
           {/* Header */}
           <div className="text-center max-w-[620px] mx-auto space-y-4">
             <span className="font-inter text-xs font-bold tracking-[0.25em] uppercase text-secondary">

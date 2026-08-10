@@ -6,14 +6,30 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   
   body {
     @apply bg-background text-body font-inter antialiased selection:bg-accent/30 selection:text-primary;
+    min-width: 320px;
+    overflow-x: hidden;
+  }
+
+  img, svg {
+    max-width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-manrope text-heading font-medium tracking-tight;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

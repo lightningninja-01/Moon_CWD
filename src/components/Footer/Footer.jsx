@@ -19,11 +19,11 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-white border-t border-border pt-24 pb-12 w-full mt-auto">
+    <footer className="bg-white border-t border-border pt-16 md:pt-24 pb-8 md:pb-12 w-full mt-auto">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 mb-12 md:mb-20">
           {/* Brand Artwork Signature */}
-          <div className="md:col-span-2 flex flex-col items-center md:items-start select-none">
+          <div className="col-span-2 md:col-span-2 flex flex-col items-center md:items-start select-none">
             <Link to="/" className="block max-w-[240px] w-full" aria-label="Moon Home">
               <img
                 src={moonHomeSvg}
@@ -102,7 +102,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border/80 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-muted tracking-widest uppercase space-y-4 md:space-y-0">
+        <div className="border-t border-border/80 pt-8 flex justify-center md:justify-start text-[10px] sm:text-xs text-muted tracking-wider sm:tracking-widest uppercase text-center md:text-left">
           <span>&copy; {currentYear} Moon Water. All rights reserved.</span>
         </div>
       </Container>
